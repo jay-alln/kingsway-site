@@ -18,6 +18,11 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -44,9 +49,118 @@
         <i class="far fa-user"></i>
       </div>
     </header>
+    
 
     <div class="main-content">
-      <div class="search">
+
+         <section class="vehicles" id="vehicles">
+      <h1 class="heading">popular <span>vehicles</span></h1>
+    
+      <div class="swiper vehicles-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img src="image/vehicle-1.png" alt="" />
+            <div class="content">
+              <h3>new model</h3>
+              <div class="price"><span>price : </span> $62,000/-</div>
+              <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+    
+          <div class="swiper-slide box">
+            <img src="image/vehicle-2.png" alt="" />
+            <div class="content">
+              <h3>new model</h3>
+              <div class="price"><span>price : </span> $62,000/-</div>
+              <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+    
+          <div class="swiper-slide box">
+            <img src="image/vehicle-3.png" alt="" />
+            <div class="content">
+              <h3>new model</h3>
+              <div class="price"><span>price : </span> $62,000/-</div>
+              <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+    
+          <div class="swiper-slide box">
+            <img src="image/vehicle-4.png" alt="" />
+            <div class="content">
+              <h3>new model</h3>
+              <div class="price"><span>price : </span> $62,000/-</div>
+              <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+    
+          <div class="swiper-slide box">
+            <img src="image/vehicle-5.png" alt="" />
+            <div class="content">
+              <h3>new model</h3>
+              <div class="price"><span>price : </span> $62,000/-</div>
+              <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+    
+          <div class="swiper-slide box">
+            <img src="image/vehicle-6.png" alt="" />
+            <div class="content">
+              <h3>new model</h3>
+              <div class="price"><span>price : </span> $62,000/-</div>
+              <p>
+                new
+                <span class="fas fa-circle"></span> 2021
+                <span class="fas fa-circle"></span> automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+              <a href="#" class="btn">check out</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+
+       <div class="search">
         <div class="modal-header-search">
           <div class="modal-search-title">
             <h2>Search<span>By</span></h2>
@@ -54,7 +168,7 @@
           <div class="modal-search-nav">
             <ul>
               <li>Vehicle</li>
-              <li style="border-bottom: 3px solid red;">Tyre</li>
+              <li style="border-bottom: 3px solid red">Tyre</li>
             </ul>
           </div>
         </div>
@@ -67,7 +181,7 @@
                 <option value="mercedes">Forklift</option>
                 <option value="audi">Industrial</option>
               </select>
-              <select name="Select" >
+              <select name="Select">
                 <option value="volvo">Select Brand..</option>
                 <option value="saab">Truck & Bus</option>
                 <option value="mercedes">Forklift</option>
@@ -79,7 +193,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
     <section>
       <div class="service-container">
@@ -142,8 +256,91 @@
       </div>
 
       <div class="credit">Kingsway Tyres | all rights reserved</div>
-    </section>
+    </section> 
 
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./app.js"></script>
+    <script>
+      var swiper = new Swiper(".vehicles-slider", {
+        grabCursor: true,
+        centeredSlides: true,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          //   el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".featured-slider", {
+        grabCursor: true,
+        centeredSlides: true,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 9500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".review-slider", {
+        grabCursor: true,
+        centeredSlides: true,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 9500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
+
+
