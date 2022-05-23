@@ -134,7 +134,11 @@ section{
     margin-bottom: 40px;
     padding-top: 10.5rem;
 }
- .vehicles .vehicles-slider{
+.vehicles{
+    width: 60%;
+    border: 2px solid red;
+}
+.vehicles .vehicles-slider{
     padding-bottom: 5rem;
 }
 
@@ -213,7 +217,6 @@ section{
 .vehicles .btn:hover{
     background:var(--yellow);
 }
-
 
 .search {
     height: auto;
@@ -426,6 +429,9 @@ section{
 }
 
 @media (max-width: 1025px) {
+    .vehicles {
+        width: 100%;
+    }
     .modal-header-search, .select-type {
         width: 100%;
         /* border: 2px solid green; */
