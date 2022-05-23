@@ -134,9 +134,21 @@ section{
     margin-bottom: 40px;
     padding-top: 10.5rem;
 }
+.two-section {
+    display: flex;
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: center;
+}
+.left-main-section {
+    /* border: 2px solid green; */
+}
+section .vehicles {
+    padding: 1rem 1rem;
+}
 .vehicles{
-    width: 60%;
-    border: 2px solid red;
+    width: 50%;
+    /* border: 2px solid red; */
 }
 .vehicles .vehicles-slider{
     padding-bottom: 5rem;
@@ -431,6 +443,9 @@ section{
 @media (max-width: 1025px) {
     .vehicles {
         width: 100%;
+    }
+    .two-section {
+        flex-direction: column;
     }
     .modal-header-search, .select-type {
         width: 100%;
